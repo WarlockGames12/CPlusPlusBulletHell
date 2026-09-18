@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build BulletHell",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "main.cpp",
+                "components/world/world.cpp",
+                "components/player/player.cpp",
+                "components/enemy/moving_enemy.cpp",
+                "components/enemy/shooting_enemy.cpp",
+                "components/particles/particle.cpp",
+                "-IC:/SFML/include",
+                "-LC:/SFML/lib",
+                "-lsfml-graphics",
+                "-lsfml-window",
+                "-lsfml-system",
+                "-o",
+                "game.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"]
+        }
+    ]
+}
